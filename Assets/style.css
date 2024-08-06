@@ -1,50 +1,54 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-#calc {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e3eb;
 }
-#content {
-    background: #1e221e;
-    padding: 20px;
-    border-radius: 10px;
-
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px 20px 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
-#content form input {
-    border: 0;
-    outline: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    font-size: 15px;
-    margin: 10px;
-    cursor: pointer;
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000e1a;
+  pointer-events: none;
 }
-#backspace {
-    background-color: rgb(237, 89, 30);
-    color: white;
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
 }
-#res {
-    padding: 10px;
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
 }
-#clear {
-    background-color: rgb(237, 89, 30);
-    color: white;
+.buttons button:active {
+  transform: scale(0.99);
 }
-form #output {
-    display: flex;
-    justify-content: flex-end;
-    margin: 15px 0;
+.operator {
+  color: #2f9fff;
 }
-form #output input {
-    text-align: right;
-    flex: 1;
-    font-size: 25px;
-}
-
